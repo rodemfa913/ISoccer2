@@ -2,17 +2,18 @@ package isoccer.factory.staff.general;
 
 import isoccer.ISoccer;
 import isoccer.factory.staff.MemberFactory;
+import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
 import isoccer.model.staff.general.Doctor;
 
-public class DoctorFactory extends MemberFactory {
+public class DoctorFactory extends GeneralFactory {
    public static final DoctorFactory me = new DoctorFactory();
 
    private DoctorFactory() {}
 
    @Override
    public Doctor create() throws Exception {
-      Doctor doctor = new Doctor(GeneralFactory.me.getCount());
+      Doctor doctor = new Doctor(this.getCount());
       this.setInfo(doctor);
       return doctor;
    }
@@ -27,6 +28,11 @@ public class DoctorFactory extends MemberFactory {
       super.setInfo(member);
       Doctor doctor = (Doctor) member;
       System.out.print("CRM: ");
-      doctor.setCRM(ISoccer.input.nextLine());
+      String crm = ISoccer.input.nextLine();
+
+      if (!crm.matches(RegEx.crm))
+         throw MemberFactory.formatException;
+
+      doctor.crm = crm;
    }
 }

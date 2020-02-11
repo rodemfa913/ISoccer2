@@ -2,18 +2,41 @@ package isoccer.factory.staff;
 
 import isoccer.ISoccer;
 import isoccer.factory.Factory;
+import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
 
 public abstract class MemberFactory implements Factory<Member> {
+   protected static Exception formatException = new Exception("Formato incorreto.");
+
    protected void setInfo(Member member) throws Exception {
       System.out.print("Nome: ");
-      member.setName(ISoccer.input.nextLine());
+      String name = ISoccer.input.nextLine();
+
+      if (name.isEmpty())
+         name = "-";
+
+      member.name = name;
       System.out.print("E-mail: ");
-      member.setEmail(ISoccer.input.nextLine());
+      String email = ISoccer.input.nextLine();
+
+      if (!email.matches(RegEx.email))
+         throw MemberFactory.formatException;
+
+      member.email = email;
       System.out.print("CPF: ");
-      member.setCPF(ISoccer.input.nextLine());
+      String cpf = ISoccer.input.nextLine();
+
+      if (!cpf.matches(RegEx.cpf))
+         throw MemberFactory.formatException;
+
+      member.cpf = cpf;
       System.out.print("Salário: ");
-      member.setSalary(Double.parseDouble(ISoccer.input.nextLine()));
+      double salary = Double.parseDouble(ISoccer.input.nextLine());
+
+      if (salary < 0)
+         salary = 0;
+
+      member.salary = salary;
       System.out.print("Telefone: ");
       member.phone = Long.parseLong(ISoccer.input.nextLine());
    }

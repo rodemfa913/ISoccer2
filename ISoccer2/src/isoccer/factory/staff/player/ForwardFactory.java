@@ -1,16 +1,15 @@
 package isoccer.factory.staff.player;
 
-import isoccer.factory.staff.MemberFactory;
 import isoccer.model.staff.player.Forward;
 
-public class ForwardFactory extends MemberFactory {
+public class ForwardFactory extends PlayerFactory {
    public static final ForwardFactory me = new ForwardFactory();
 
    private ForwardFactory() {}
 
    @Override
    public Forward create() throws Exception {
-      Forward forward = new Forward(PlayerFactory.me.getCount());
+      Forward forward = new Forward(this.getCount());
       this.setInfo(forward);
       return forward;
    }
