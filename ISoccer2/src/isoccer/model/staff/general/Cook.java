@@ -10,7 +10,7 @@ public class Cook extends Member {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Cook.type;
    }
 }

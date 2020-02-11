@@ -1,9 +1,8 @@
-package isoccer.factory.partner;
+package isoccer.model.partner;
 
 import isoccer.ISoccer;
-import isoccer.factory.Factory;
+import isoccer.model.Factory;
 import isoccer.model.RegEx;
-import isoccer.model.partner.FanPartner;
 
 public abstract class FanPartnerFactory implements Factory<FanPartner> {
    private static int count;

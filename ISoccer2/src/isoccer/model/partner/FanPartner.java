@@ -1,17 +1,41 @@
 package isoccer.model.partner;
 
 public abstract class FanPartner {
-   public String address, cpf, email, name;
-   public boolean defaulting;
+   protected String address, cpf, email, name;
+   protected boolean defaulting;
    public final int id;
-   public long phone;
+   protected long phone;
 
    protected FanPartner(int id) {
       this.address = this.cpf = this.email = this.name = "-";
       this.id = id;
    }
 
-   protected abstract double getContribution();
+   public String getAddress() {
+      return this.address;
+   }
+
+   public abstract double getContribution();
+
+   public String getCPF() {
+      return this.cpf;
+   }
+
+   public String getEmail() {
+      return this.email;
+   }
+
+   public String getName() {
+      return this.name;
+   }
+
+   public long getPhone() {
+      return this.phone;
+   }
+
+   public boolean isDefaulting() {
+      return this.defaulting;
+   }
 
    @Override
    public String toString() {

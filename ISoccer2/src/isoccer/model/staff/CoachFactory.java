@@ -1,4 +1,4 @@
-package isoccer.factory.staff;
+package isoccer.model.staff;
 
 import isoccer.model.staff.Coach;
 

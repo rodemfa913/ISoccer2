@@ -8,7 +8,7 @@ public class Coach extends Member {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Coach.type;
    }
 }

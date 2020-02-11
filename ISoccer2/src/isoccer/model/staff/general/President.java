@@ -10,7 +10,7 @@ public class President extends Member {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return President.type;
    }
 }

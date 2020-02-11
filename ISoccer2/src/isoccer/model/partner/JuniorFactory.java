@@ -1,4 +1,4 @@
-package isoccer.factory.partner;
+package isoccer.model.partner;
 
 import isoccer.model.partner.Junior;
 

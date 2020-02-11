@@ -9,7 +9,7 @@ public class Elite extends FanPartner {
    }
 
    @Override
-   protected double getContribution() {
+   public double getContribution() {
       return Elite.contribution;
    }
 }

@@ -8,7 +8,7 @@ public class GoalKeeper extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return GoalKeeper.type;
    }
 }

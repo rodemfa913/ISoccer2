@@ -1,8 +1,14 @@
-package isoccer.factory.staff;
+package isoccer.model.staff;
 
 import isoccer.ISoccer;
-import isoccer.factory.staff.general.*;
 import isoccer.model.staff.Member;
+import isoccer.model.staff.general.CookFactory;
+import isoccer.model.staff.general.DoctorFactory;
+import isoccer.model.staff.general.DriverFactory;
+import isoccer.model.staff.general.LawyerFactory;
+import isoccer.model.staff.general.PresidentFactory;
+import isoccer.model.staff.general.TrainerFactory;
+import isoccer.model.staff.general.GeneralFactory;
 
 public class GeneralsFactory extends MemberFactory {
    public static final GeneralsFactory me = new GeneralsFactory();

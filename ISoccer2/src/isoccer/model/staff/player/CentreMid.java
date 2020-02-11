@@ -8,7 +8,7 @@ public class CentreMid extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return CentreMid.type;
    }
 }

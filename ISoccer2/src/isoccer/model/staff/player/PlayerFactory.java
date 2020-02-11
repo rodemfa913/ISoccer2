@@ -1,6 +1,6 @@
-package isoccer.factory.staff.player;
+package isoccer.model.staff.player;
 
-import isoccer.factory.staff.MemberFactory;
+import isoccer.model.staff.MemberFactory;
 
 public abstract class PlayerFactory extends MemberFactory {
    private static int count;

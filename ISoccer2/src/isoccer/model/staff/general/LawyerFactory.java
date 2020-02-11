@@ -1,4 +1,4 @@
-package isoccer.factory.staff.general;
+package isoccer.model.staff.general;
 
 import isoccer.model.staff.general.Lawyer;
 

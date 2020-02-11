@@ -1,4 +1,4 @@
-package isoccer.factory.staff.player;
+package isoccer.model.staff.player;
 
 import isoccer.model.staff.player.GoalKeeper;
 

@@ -3,15 +3,19 @@ package isoccer.model.staff.general;
 import isoccer.model.staff.Member;
 
 public class Driver extends Member {
-   public long cnh;
+   protected long cnh;
    public static final String type = "motorista";
 
    public Driver(int id) {
       super(id);
    }
 
+   public long getCNH() {
+      return this.cnh;
+   }
+
    @Override
-   protected String getType() {
+   public String getType() {
       return Driver.type;
    }
 

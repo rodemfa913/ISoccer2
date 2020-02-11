@@ -9,7 +9,7 @@ public class Senior extends FanPartner {
    }
 
    @Override
-   protected double getContribution() {
+   public double getContribution() {
       return Senior.contribution;
    }
 }

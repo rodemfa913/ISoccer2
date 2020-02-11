@@ -1,17 +1,37 @@
 package isoccer.model.staff;
 
 public abstract class Member {
-   public String cpf, email, name;
+   protected String cpf, email, name;
    public final int id;
-   public long phone;
-   public double salary;
+   protected long phone;
+   protected double salary;
 
    protected Member(int id) {
       this.cpf = this.email = this.name = "-";
       this.id = id;
    }
 
-   protected abstract String getType();
+   public String getCPF() {
+      return this.cpf;
+   }
+
+   public String getEmail() {
+      return this.email;
+   }
+
+   public String getName() {
+      return this.name;
+   }
+
+   public double getSalary() {
+      return this.salary;
+   }
+
+   public long getPhone() {
+      return this.phone;
+   }
+
+   public abstract String getType();
 
    @Override
    public String toString() {

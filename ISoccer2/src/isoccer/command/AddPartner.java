@@ -1,9 +1,12 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.factory.partner.*;
 import isoccer.model.Model;
+import isoccer.model.partner.EliteFactory;
 import isoccer.model.partner.FanPartner;
+import isoccer.model.partner.FanPartnerFactory;
+import isoccer.model.partner.JuniorFactory;
+import isoccer.model.partner.SeniorFactory;
 
 public class AddPartner implements Command {
    private FanPartnerFactory[] factories;
@@ -27,7 +30,9 @@ public class AddPartner implements Command {
       p = Integer.parseInt(ISoccer.input.nextLine());
       FanPartner partner = this.factories[p].create();
       Model.me.setPartner(partner);
-      System.out.println("Sócio-torcedor '" + partner.id + ": " + partner.name + "' adicionado.");
+      System.out.println(
+         "Sócio-torcedor '" + partner.id + ": " + partner.getName() + "' adicionado."
+      );
    }
 
    @Override

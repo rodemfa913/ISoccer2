@@ -9,7 +9,7 @@ public class Junior extends FanPartner {
    }
 
    @Override
-   protected double getContribution() {
+   public double getContribution() {
       return Junior.contribution;
    }
 }

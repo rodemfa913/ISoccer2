@@ -8,7 +8,7 @@ public class Forward extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Forward.type;
    }
 }

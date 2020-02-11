@@ -10,7 +10,7 @@ public class Trainer extends Member {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Trainer.type;
    }
 }

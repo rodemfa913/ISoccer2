@@ -8,7 +8,7 @@ public class LeftMid extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return LeftMid.type;
    }
 }

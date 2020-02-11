@@ -8,7 +8,7 @@ public class Defender extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Defender.type;
    }
 }

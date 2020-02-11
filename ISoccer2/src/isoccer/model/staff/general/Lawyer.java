@@ -10,7 +10,7 @@ public class Lawyer extends Member {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return Lawyer.type;
    }
 }

@@ -8,7 +8,7 @@ public class DefMid extends Player {
    }
 
    @Override
-   protected String getType() {
+   public String getType() {
       return DefMid.type;
    }
 }

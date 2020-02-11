@@ -1,9 +1,12 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.factory.staff.*;
 import isoccer.model.Model;
+import isoccer.model.staff.CoachFactory;
+import isoccer.model.staff.GeneralsFactory;
 import isoccer.model.staff.Member;
+import isoccer.model.staff.MemberFactory;
+import isoccer.model.staff.PlayersFactory;
 
 public class AddMember implements Command {
    private MemberFactory[] factories;
@@ -28,7 +31,7 @@ public class AddMember implements Command {
       m = Integer.parseInt(ISoccer.input.nextLine());
       Member member = this.factories[m].create();
       Model.me.setMember(member);
-      System.out.println("Funcionário '" + member.id + ": " + member.name + " adicionado.");
+      System.out.println("Funcionário '" + member.id + ": " + member.getName() + " adicionado.");
    }
 
    @Override

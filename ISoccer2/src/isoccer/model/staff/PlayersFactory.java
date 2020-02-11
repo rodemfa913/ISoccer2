@@ -1,8 +1,15 @@
-package isoccer.factory.staff;
+package isoccer.model.staff;
 
 import isoccer.ISoccer;
-import isoccer.factory.staff.player.*;
+import isoccer.model.staff.player.CentreMidFactory;
+import isoccer.model.staff.player.DefenderFactory;
+import isoccer.model.staff.player.DefMidFactory;
+import isoccer.model.staff.player.ForwardFactory;
+import isoccer.model.staff.player.GoalKeeperFactory;
+import isoccer.model.staff.player.LeftMidFactory;
 import isoccer.model.staff.player.Player;
+import isoccer.model.staff.player.PlayerFactory;
+import isoccer.model.staff.player.RightMidFactory;
 
 public class PlayersFactory extends MemberFactory {
    private PlayerFactory[] factories;

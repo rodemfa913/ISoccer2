@@ -1,7 +1,7 @@
-package isoccer.factory.staff;
+package isoccer.model.staff;
 
 import isoccer.ISoccer;
-import isoccer.factory.Factory;
+import isoccer.model.Factory;
 import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
 

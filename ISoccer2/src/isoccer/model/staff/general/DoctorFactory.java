@@ -1,9 +1,9 @@
-package isoccer.factory.staff.general;
+package isoccer.model.staff.general;
 
 import isoccer.ISoccer;
-import isoccer.factory.staff.MemberFactory;
 import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
+import isoccer.model.staff.MemberFactory;
 import isoccer.model.staff.general.Doctor;
 
 public class DoctorFactory extends GeneralFactory {

@@ -3,7 +3,7 @@ package isoccer.model.staff.general;
 import isoccer.model.staff.Member;
 
 public class Doctor extends Member {
-   public String crm;
+   protected String crm;
    public static final String type = "médico";
 
    public Doctor(int id) {
@@ -11,8 +11,12 @@ public class Doctor extends Member {
       this.crm = "-";
    }
 
+   public String getCRM() {
+      return this.crm;
+   }
+
    @Override
-   protected String getType() {
+   public String getType() {
       return Doctor.type;
    }
 
