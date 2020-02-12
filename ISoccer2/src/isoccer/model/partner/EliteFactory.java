@@ -8,10 +8,8 @@ public class EliteFactory extends FanPartnerFactory {
    private EliteFactory() {}
 
    @Override
-   public Elite create() throws Exception {
-      Elite elite = new Elite(this.getCount());
-      this.setInfo(elite);
-      return elite;
+   public Elite create() {
+      return new Elite(this.getCount());
    }
 
    @Override

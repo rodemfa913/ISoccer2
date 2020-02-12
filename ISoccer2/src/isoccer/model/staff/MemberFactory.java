@@ -8,7 +8,8 @@ import isoccer.model.staff.Member;
 public abstract class MemberFactory implements Factory<Member> {
    protected static Exception formatException = new Exception("Formato incorreto.");
 
-   protected void setInfo(Member member) throws Exception {
+   @Override
+   public void setInfo(Member member) throws Exception {
       System.out.print("Nome: ");
       String name = ISoccer.input.nextLine();
 

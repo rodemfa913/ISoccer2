@@ -8,10 +8,8 @@ public class ForwardFactory extends PlayerFactory {
    private ForwardFactory() {}
 
    @Override
-   public Forward create() throws Exception {
-      Forward forward = new Forward(this.getCount());
-      this.setInfo(forward);
-      return forward;
+   public Forward create() {
+      return new Forward(this.getCount());
    }
 
    @Override

@@ -8,10 +8,8 @@ public class LawyerFactory extends GeneralFactory {
    private LawyerFactory() {}
 
    @Override
-   public Lawyer create() throws Exception {
-      Lawyer lawyer = new Lawyer(this.getCount());
-      this.setInfo(lawyer);
-      return lawyer;
+   public Lawyer create() {
+      return new Lawyer(this.getCount());
    }
 
    @Override

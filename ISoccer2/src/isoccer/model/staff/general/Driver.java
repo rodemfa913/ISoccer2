@@ -6,7 +6,7 @@ public class Driver extends Member {
    protected long cnh;
    public static final String type = "motorista";
 
-   public Driver(int id) {
+   protected Driver(int id) {
       super(id);
    }
 

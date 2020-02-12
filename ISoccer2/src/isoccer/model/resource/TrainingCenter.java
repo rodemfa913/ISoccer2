@@ -1,14 +1,24 @@
 package isoccer.model.resource;
 
 public class TrainingCenter extends Resource {
-   public int numberOfBedroom;
+   protected int nBedroom;
+   public static final String type = "centro de treinamento";
 
-   public TrainingCenter(int id) {
+   protected TrainingCenter(int id) {
       super(id);
+   }
+
+   public int getNumberOfBedrooms() {
+      return this.nBedroom;
+   }
+
+   @Override
+   public String getType() {
+      return TrainingCenter.type;
    }
 
    @Override
    public String toString() {
-      return super.toString() + "\nNúmero de dormitórios: " + this.numberOfBedroom;
+      return super.toString() + "\nNúmero de dormitórios: " + this.nBedroom;
    }
 }

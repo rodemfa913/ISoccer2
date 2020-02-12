@@ -8,10 +8,8 @@ public class CookFactory extends GeneralFactory {
    private CookFactory() {}
 
    @Override
-   public Cook create() throws Exception {
-      Cook cook = new Cook(this.getCount());
-      this.setInfo(cook);
-      return cook;
+   public Cook create() {
+      return new Cook(this.getCount());
    }
 
    @Override

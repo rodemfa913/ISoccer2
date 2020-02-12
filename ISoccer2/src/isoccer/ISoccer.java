@@ -22,7 +22,7 @@ public class ISoccer {
       }
 
       Command[] actions = {
-         AddMember.me, AddPartner.me/*, AddResource.me, ManagePlayer.me, new ManagePartner.me,
+         AddMember.me, AddPartner.me, AddResource.me/*, ManagePlayer.me, new ManagePartner.me,
          ManageResource.me, SetContribution.me, GenerateReport.me*/
       };
 

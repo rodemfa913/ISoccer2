@@ -3,7 +3,7 @@ package isoccer.model.staff.player;
 public class RightMid extends Player {
    public static final String type = "lateral direito";
 
-   public RightMid(int id) {
+   protected RightMid(int id) {
       super(id);
    }
 

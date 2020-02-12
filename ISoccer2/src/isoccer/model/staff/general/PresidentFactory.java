@@ -8,10 +8,8 @@ public class PresidentFactory extends GeneralFactory {
    private PresidentFactory() {}
 
    @Override
-   public President create() throws Exception {
-      President president = new President(this.getCount());
-      this.setInfo(president);
-      return president;
+   public President create() {
+      return new President(this.getCount());
    }
 
    @Override

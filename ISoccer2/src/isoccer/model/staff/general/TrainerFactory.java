@@ -8,10 +8,8 @@ public class TrainerFactory extends GeneralFactory {
    private TrainerFactory() {}
 
    @Override
-   public Trainer create() throws Exception {
-      Trainer trainer = new Trainer(this.getCount());
-      this.setInfo(trainer);
-      return trainer;
+   public Trainer create() {
+      return new Trainer(this.getCount());
    }
 
    @Override

@@ -1,13 +1,23 @@
 package isoccer.model.resource;
 
 public abstract class Resource {
-   public boolean available;
+   protected boolean available;
    public final int id;
-   public String name;
+   protected String name;
 
-   public Resource(int id) {
+   protected Resource(int id) {
       this.id = id;
       this.name = "-";
+   }
+
+   public String getName() {
+      return this.name;
+   }
+
+   public abstract String getType();
+
+   public boolean isAvailable() {
+      return this.available;
    }
 
    @Override

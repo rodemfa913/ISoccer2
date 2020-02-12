@@ -10,10 +10,8 @@ public class DriverFactory extends GeneralFactory {
    private DriverFactory() {}
 
    @Override
-   public Driver create() throws Exception {
-      Driver driver = new Driver(this.getCount());
-      this.setInfo(driver);
-      return driver;
+   public Driver create() {
+      return new Driver(this.getCount());
    }
 
    @Override
@@ -22,7 +20,7 @@ public class DriverFactory extends GeneralFactory {
    }
 
    @Override
-   protected void setInfo(Member member) throws Exception {
+   public void setInfo(Member member) throws Exception {
       super.setInfo(member);
       Driver driver = (Driver) member;
       System.out.print("CNH: ");

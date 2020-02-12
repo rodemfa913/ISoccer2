@@ -5,7 +5,7 @@ import isoccer.model.staff.Member;
 public class President extends Member {
    public static final String type = "presidente";
 
-   public President(int id) {
+   protected President(int id) {
       super(id);
    }
 

@@ -4,7 +4,7 @@ public class Junior extends FanPartner {
    public static double contribution;
    public static final String type = "júnior";
 
-   public Junior(int id) {
+   protected Junior(int id) {
       super(id);
    }
 

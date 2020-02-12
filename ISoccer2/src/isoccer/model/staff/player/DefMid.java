@@ -3,7 +3,7 @@ package isoccer.model.staff.player;
 public class DefMid extends Player {
    public static final String type = "volante";
 
-   public DefMid(int id) {
+   protected DefMid(int id) {
       super(id);
    }
 

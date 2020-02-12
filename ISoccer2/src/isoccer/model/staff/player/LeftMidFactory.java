@@ -8,10 +8,8 @@ public class LeftMidFactory extends PlayerFactory {
    private LeftMidFactory() {}
 
    @Override
-   public LeftMid create() throws Exception {
-      LeftMid leftMid = new LeftMid(this.getCount());
-      this.setInfo(leftMid);
-      return leftMid;
+   public LeftMid create() {
+      return new LeftMid(this.getCount());
    }
 
    @Override

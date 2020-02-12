@@ -8,10 +8,8 @@ public class GoalKeeperFactory extends PlayerFactory {
    private GoalKeeperFactory() {}
 
    @Override
-   public GoalKeeper create() throws Exception {
-      GoalKeeper goalKeeper = new GoalKeeper(this.getCount());
-      this.setInfo(goalKeeper);
-      return goalKeeper;
+   public GoalKeeper create() {
+      return new GoalKeeper(this.getCount());
    }
 
    @Override

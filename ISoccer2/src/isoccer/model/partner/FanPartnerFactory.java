@@ -2,6 +2,7 @@ package isoccer.model.partner;
 
 import isoccer.ISoccer;
 import isoccer.model.Factory;
+import isoccer.model.Model;
 import isoccer.model.RegEx;
 
 public abstract class FanPartnerFactory implements Factory<FanPartner> {
@@ -14,7 +15,8 @@ public abstract class FanPartnerFactory implements Factory<FanPartner> {
 
    public abstract void setContribution(double contribution);
 
-   protected void setInfo(FanPartner partner) throws Exception {
+   @Override
+   public void setInfo(FanPartner partner) throws Exception {
       System.out.print("Nome: ");
       String name = ISoccer.input.nextLine();
 
@@ -45,5 +47,10 @@ public abstract class FanPartnerFactory implements Factory<FanPartner> {
          address = "-";
 
       partner.address = address;
+   }
+
+   @Override
+   public void put(FanPartner partner) {
+      Model.me.setPartner(partner);
    }
 }

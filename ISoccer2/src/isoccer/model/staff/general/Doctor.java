@@ -6,7 +6,7 @@ public class Doctor extends Member {
    protected String crm;
    public static final String type = "médico";
 
-   public Doctor(int id) {
+   protected Doctor(int id) {
       super(id);
       this.crm = "-";
    }

@@ -8,10 +8,8 @@ public class DefenderFactory extends PlayerFactory {
    private DefenderFactory() {}
 
    @Override
-   public Defender create() throws Exception {
-      Defender defender = new Defender(this.getCount());
-      this.setInfo(defender);
-      return defender;
+   public Defender create() {
+      return new Defender(this.getCount());
    }
 
    @Override

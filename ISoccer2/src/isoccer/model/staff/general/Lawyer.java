@@ -5,7 +5,7 @@ import isoccer.model.staff.Member;
 public class Lawyer extends Member {
    public static final String type = "advogado";
 
-   public Lawyer(int id) {
+   protected Lawyer(int id) {
       super(id);
    }
 

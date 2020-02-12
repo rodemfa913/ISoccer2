@@ -12,10 +12,8 @@ public class DoctorFactory extends GeneralFactory {
    private DoctorFactory() {}
 
    @Override
-   public Doctor create() throws Exception {
-      Doctor doctor = new Doctor(this.getCount());
-      this.setInfo(doctor);
-      return doctor;
+   public Doctor create() {
+      return new Doctor(this.getCount());
    }
 
    @Override
@@ -24,7 +22,7 @@ public class DoctorFactory extends GeneralFactory {
    }
 
    @Override
-   protected void setInfo(Member member) throws Exception {
+   public void setInfo(Member member) throws Exception {
       super.setInfo(member);
       Doctor doctor = (Doctor) member;
       System.out.print("CRM: ");

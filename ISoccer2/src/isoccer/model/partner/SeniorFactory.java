@@ -8,10 +8,8 @@ public class SeniorFactory extends FanPartnerFactory {
    private SeniorFactory() {}
 
    @Override
-   public Senior create() throws Exception {
-      Senior senior = new Senior(this.getCount());
-      this.setInfo(senior);
-      return senior;
+   public Senior create() {
+      return new Senior(this.getCount());
    }
 
    @Override

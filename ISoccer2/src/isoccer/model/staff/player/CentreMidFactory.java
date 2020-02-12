@@ -8,10 +8,8 @@ public class CentreMidFactory extends PlayerFactory {
    private CentreMidFactory() {}
 
    @Override
-   public CentreMid create() throws Exception {
-      CentreMid centreMid = new CentreMid(this.getCount());
-      this.setInfo(centreMid);
-      return centreMid;
+   public CentreMid create() {
+      return new CentreMid(this.getCount());
    }
 
    @Override

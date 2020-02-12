@@ -3,7 +3,7 @@ package isoccer.model.staff;
 public class Coach extends Member {
    public static final String type = "técnico";
 
-   public Coach(int id) {
+   protected Coach(int id) {
       super(id);
    }
 

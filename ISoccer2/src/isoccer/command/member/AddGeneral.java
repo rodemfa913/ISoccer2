@@ -1,20 +1,21 @@
-package isoccer.model.staff;
+package isoccer.command.member;
 
 import isoccer.ISoccer;
+import isoccer.command.Command;
 import isoccer.model.staff.Member;
 import isoccer.model.staff.general.CookFactory;
 import isoccer.model.staff.general.DoctorFactory;
 import isoccer.model.staff.general.DriverFactory;
+import isoccer.model.staff.general.GeneralFactory;
 import isoccer.model.staff.general.LawyerFactory;
 import isoccer.model.staff.general.PresidentFactory;
 import isoccer.model.staff.general.TrainerFactory;
-import isoccer.model.staff.general.GeneralFactory;
 
-public class GeneralsFactory extends MemberFactory {
-   public static final GeneralsFactory me = new GeneralsFactory();
+public class AddGeneral implements Command {
    private GeneralFactory[] factories;
+   public static final AddGeneral me = new AddGeneral();
 
-   private GeneralsFactory() {
+   private AddGeneral() {
       this.factories = new GeneralFactory[] {
          PresidentFactory.me, DoctorFactory.me, TrainerFactory.me,
          DriverFactory.me, CookFactory.me, LawyerFactory.me
@@ -22,16 +23,20 @@ public class GeneralsFactory extends MemberFactory {
    }
 
    @Override
-   public Member create() throws Exception {
+   public void execute() throws Exception {
       System.out.println();
-      int s;
+      int m;
 
-      for (s = 0; s < this.factories.length; s++)
-         System.out.println(s + " - " + this.factories[s].getTag());
+      for (m = 0; m < this.factories.length; m++)
+         System.out.println(m + " - " + this.factories[m].getTag());
 
       System.out.print("\nFunção: ");
-      s = Integer.parseInt(ISoccer.input.nextLine());
-      return this.factories[s].create();
+      m = Integer.parseInt(ISoccer.input.nextLine());
+      GeneralFactory factory = this.factories[m];
+      Member member = factory.create();
+      factory.setInfo(member);
+      factory.put(member);
+      System.out.println("Funcionário '" + member.id + ": " + member.getName() + " adicionado.");
    }
 
    @Override

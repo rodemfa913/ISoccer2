@@ -8,10 +8,8 @@ public class JuniorFactory extends FanPartnerFactory {
    private JuniorFactory() {}
 
    @Override
-   public Junior create() throws Exception {
-      Junior junior = new Junior(this.getCount());
-      this.setInfo(junior);
-      return junior;
+   public Junior create() {
+      return new Junior(this.getCount());
    }
 
    @Override

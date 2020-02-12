@@ -8,10 +8,8 @@ public class DefMidFactory extends PlayerFactory {
    private DefMidFactory() {}
 
    @Override
-   public DefMid create() throws Exception {
-      DefMid defMid = new DefMid(this.getCount());
-      this.setInfo(defMid);
-      return defMid;
+   public DefMid create() {
+      return new DefMid(this.getCount());
    }
 
    @Override
