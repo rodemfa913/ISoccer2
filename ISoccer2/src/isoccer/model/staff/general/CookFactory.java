@@ -1,5 +1,6 @@
 package isoccer.model.staff.general;
 
+import isoccer.model.Model;
 import isoccer.model.staff.general.Cook;
 
 public class CookFactory extends GeneralFactory {
@@ -9,7 +10,7 @@ public class CookFactory extends GeneralFactory {
 
    @Override
    public Cook create() {
-      return new Cook(this.getCount());
+      return new Cook(Model.me.getCount());
    }
 
    @Override

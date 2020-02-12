@@ -14,8 +14,18 @@ public class StadiumFactory extends ResourceFactory {
    }
 
    @Override
+   public Stadium get() throws Exception {
+      return Model.me.getStadium();
+   }
+
+   @Override
    public String getTag() {
       return Stadium.type;
+   }
+
+   @Override
+   public void put(Resource resource) {
+      Model.me.setStadium((Stadium) resource);
    }
 
    @Override
@@ -43,10 +53,5 @@ public class StadiumFactory extends ResourceFactory {
          nSnackBar = 0;
 
       stadium.nSnackBar = nSnackBar;
-   }
-
-   @Override
-   public void put(Resource resource) {
-      Model.me.setStadium((Stadium) resource);
    }
 }

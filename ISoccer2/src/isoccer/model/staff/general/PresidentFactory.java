@@ -1,5 +1,6 @@
 package isoccer.model.staff.general;
 
+import isoccer.model.Model;
 import isoccer.model.staff.general.President;
 
 public class PresidentFactory extends GeneralFactory {
@@ -9,7 +10,7 @@ public class PresidentFactory extends GeneralFactory {
 
    @Override
    public President create() {
-      return new President(this.getCount());
+      return new President(Model.me.getCount());
    }
 
    @Override

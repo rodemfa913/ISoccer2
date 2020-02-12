@@ -1,14 +1,20 @@
 package isoccer.model.staff.player;
 
+import isoccer.ISoccer;
 import isoccer.model.Model;
 import isoccer.model.staff.Member;
 import isoccer.model.staff.MemberFactory;
 
 public abstract class PlayerFactory extends MemberFactory {
-   private static int count;
+   @Override
+   public Player get() throws Exception {
+      return PlayerFactory.getPlayer();
+   }
 
-   protected int getCount() {
-      return PlayerFactory.count++;
+   public static Player getPlayer() throws Exception {
+      System.out.print("Id: ");
+      int id = Integer.parseInt(ISoccer.input.nextLine());
+      return Model.me.getPlayer(id);
    }
 
    @Override

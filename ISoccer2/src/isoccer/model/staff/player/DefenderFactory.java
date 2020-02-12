@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.Defender;
 
 public class DefenderFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class DefenderFactory extends PlayerFactory {
 
    @Override
    public Defender create() {
-      return new Defender(this.getCount());
+      return new Defender(Model.me.getCount());
    }
 
    @Override

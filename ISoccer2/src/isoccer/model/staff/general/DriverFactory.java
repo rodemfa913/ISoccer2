@@ -1,6 +1,7 @@
 package isoccer.model.staff.general;
 
 import isoccer.ISoccer;
+import isoccer.model.Model;
 import isoccer.model.staff.Member;
 import isoccer.model.staff.general.Driver;
 
@@ -11,7 +12,7 @@ public class DriverFactory extends GeneralFactory {
 
    @Override
    public Driver create() {
-      return new Driver(this.getCount());
+      return new Driver(Model.me.getCount());
    }
 
    @Override

@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.GoalKeeper;
 
 public class GoalKeeperFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class GoalKeeperFactory extends PlayerFactory {
 
    @Override
    public GoalKeeper create() {
-      return new GoalKeeper(this.getCount());
+      return new GoalKeeper(Model.me.getCount());
    }
 
    @Override

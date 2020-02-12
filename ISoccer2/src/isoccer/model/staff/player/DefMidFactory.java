@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.DefMid;
 
 public class DefMidFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class DefMidFactory extends PlayerFactory {
 
    @Override
    public DefMid create() {
-      return new DefMid(this.getCount());
+      return new DefMid(Model.me.getCount());
    }
 
    @Override

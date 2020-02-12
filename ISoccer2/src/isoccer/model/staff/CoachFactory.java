@@ -14,6 +14,11 @@ public class CoachFactory extends MemberFactory {
    }
 
    @Override
+   public Coach get() throws Exception {
+      return Model.me.getCoach();
+   }
+
+   @Override
    public String getTag() {
       return Coach.type;
    }

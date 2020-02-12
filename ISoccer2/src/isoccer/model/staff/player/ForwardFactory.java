@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.Forward;
 
 public class ForwardFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class ForwardFactory extends PlayerFactory {
 
    @Override
    public Forward create() {
-      return new Forward(this.getCount());
+      return new Forward(Model.me.getCount());
    }
 
    @Override

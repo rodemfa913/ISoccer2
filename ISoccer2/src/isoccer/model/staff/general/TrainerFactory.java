@@ -1,5 +1,6 @@
 package isoccer.model.staff.general;
 
+import isoccer.model.Model;
 import isoccer.model.staff.general.Trainer;
 
 public class TrainerFactory extends GeneralFactory {
@@ -9,7 +10,7 @@ public class TrainerFactory extends GeneralFactory {
 
    @Override
    public Trainer create() {
-      return new Trainer(this.getCount());
+      return new Trainer(Model.me.getCount());
    }
 
    @Override

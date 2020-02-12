@@ -2,7 +2,7 @@ package isoccer.model.partner;
 
 public abstract class FanPartner {
    protected String address, cpf, email, name;
-   protected boolean defaulting;
+   public boolean defaulting;
    public final int id;
    protected long phone;
 
@@ -31,10 +31,6 @@ public abstract class FanPartner {
 
    public long getPhone() {
       return this.phone;
-   }
-
-   public boolean isDefaulting() {
-      return this.defaulting;
    }
 
    @Override

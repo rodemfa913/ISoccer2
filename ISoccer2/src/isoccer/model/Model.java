@@ -1,5 +1,6 @@
 package isoccer.model;
 
+import isoccer.exception.NotFoundException;
 import isoccer.model.partner.FanPartner;
 import isoccer.model.resource.Stadium;
 import isoccer.model.resource.TrainingCenter;
@@ -11,10 +12,10 @@ import java.util.HashMap;
 
 public class Model {
    private Coach coach;
+   private int count;
    private HashMap<Integer, Transport> fleet;
    private HashMap<Integer, Member> members;
    public static final Model me = new Model();
-   private Exception notFoundException;
    private HashMap<Integer, FanPartner> partners;
    private HashMap<Integer, Player> players;
    private Stadium stadium;
@@ -23,7 +24,6 @@ public class Model {
    private Model() {
       this.fleet = new HashMap<>();
       this.members = new HashMap<>();
-      this.notFoundException = new Exception("Não encontrado.");
       this.partners = new HashMap<>();
       this.players = new HashMap<>();
    }
@@ -32,16 +32,20 @@ public class Model {
       Transport bus = this.fleet.get(id);
 
       if (bus == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return bus;
    }
 
    public Coach getCoach() throws Exception {
       if (this.coach == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return this.coach;
+   }
+
+   public int getCount() {
+      return this.count++;
    }
 
    public ArrayList<Transport> getFleet() {
@@ -52,7 +56,7 @@ public class Model {
       Member member = this.members.get(id);
 
       if (member == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return member;
    }
@@ -65,7 +69,7 @@ public class Model {
       FanPartner partner = this.partners.get(id);
 
       if (partner == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return partner;
    }
@@ -78,7 +82,7 @@ public class Model {
       Player player = this.players.get(id);
 
       if (player == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return player;
    }
@@ -89,14 +93,14 @@ public class Model {
 
    public Stadium getStadium() throws Exception {
       if (this.stadium == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return this.stadium;
    }
 
    public TrainingCenter getTrainingCenter() throws Exception {
       if (this.trainingCenter == null)
-         throw this.notFoundException;
+         throw new NotFoundException();
 
       return this.trainingCenter;
    }

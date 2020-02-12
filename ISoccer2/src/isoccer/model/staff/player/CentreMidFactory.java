@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.CentreMid;
 
 public class CentreMidFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class CentreMidFactory extends PlayerFactory {
 
    @Override
    public CentreMid create() {
-      return new CentreMid(this.getCount());
+      return new CentreMid(Model.me.getCount());
    }
 
    @Override

@@ -1,9 +1,10 @@
 package isoccer.model.staff.general;
 
 import isoccer.ISoccer;
+import isoccer.exception.FormatException;
+import isoccer.model.Model;
 import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
-import isoccer.model.staff.MemberFactory;
 import isoccer.model.staff.general.Doctor;
 
 public class DoctorFactory extends GeneralFactory {
@@ -13,7 +14,7 @@ public class DoctorFactory extends GeneralFactory {
 
    @Override
    public Doctor create() {
-      return new Doctor(this.getCount());
+      return new Doctor(Model.me.getCount());
    }
 
    @Override
@@ -29,7 +30,7 @@ public class DoctorFactory extends GeneralFactory {
       String crm = ISoccer.input.nextLine();
 
       if (!crm.matches(RegEx.crm))
-         throw MemberFactory.formatException;
+         throw new FormatException();
 
       doctor.crm = crm;
    }

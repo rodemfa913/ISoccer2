@@ -1,13 +1,12 @@
 package isoccer.model.staff;
 
 import isoccer.ISoccer;
+import isoccer.exception.FormatException;
 import isoccer.model.Factory;
 import isoccer.model.RegEx;
 import isoccer.model.staff.Member;
 
 public abstract class MemberFactory implements Factory<Member> {
-   protected static Exception formatException = new Exception("Formato incorreto.");
-
    @Override
    public void setInfo(Member member) throws Exception {
       System.out.print("Nome: ");
@@ -21,14 +20,14 @@ public abstract class MemberFactory implements Factory<Member> {
       String email = ISoccer.input.nextLine();
 
       if (!email.matches(RegEx.email))
-         throw MemberFactory.formatException;
+         throw new FormatException();
 
       member.email = email;
       System.out.print("CPF: ");
       String cpf = ISoccer.input.nextLine();
 
       if (!cpf.matches(RegEx.cpf))
-         throw MemberFactory.formatException;
+         throw new FormatException();
 
       member.cpf = cpf;
       System.out.print("Salário: ");

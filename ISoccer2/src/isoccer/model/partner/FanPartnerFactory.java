@@ -1,19 +1,29 @@
 package isoccer.model.partner;
 
 import isoccer.ISoccer;
+import isoccer.exception.FormatException;
 import isoccer.model.Factory;
 import isoccer.model.Model;
 import isoccer.model.RegEx;
 
 public abstract class FanPartnerFactory implements Factory<FanPartner> {
-   private static int count;
-   protected static Exception formatException = new Exception("Formato incorreto.");
+   public abstract void setContribution(double contribution);
 
-   protected int getCount() {
-      return FanPartnerFactory.count++;
+   @Override
+   public FanPartner get() throws Exception {
+      return FanPartnerFactory.getPartner();
    }
 
-   public abstract void setContribution(double contribution);
+   public static FanPartner getPartner() throws Exception {
+      System.out.print("Id: ");
+      int id = Integer.parseInt(ISoccer.input.nextLine());
+      return Model.me.getPartner(id);
+   }
+
+   @Override
+   public void put(FanPartner partner) {
+      Model.me.setPartner(partner);
+   }
 
    @Override
    public void setInfo(FanPartner partner) throws Exception {
@@ -28,14 +38,14 @@ public abstract class FanPartnerFactory implements Factory<FanPartner> {
       String email = ISoccer.input.nextLine();
 
       if (!email.matches(RegEx.email))
-         throw FanPartnerFactory.formatException;
+         throw new FormatException();
 
       partner.email = email;
       System.out.print("CPF: ");
       String cpf = ISoccer.input.nextLine();
 
       if (!cpf.matches(RegEx.cpf))
-         throw FanPartnerFactory.formatException;
+         throw new FormatException();
 
       partner.cpf = cpf;
       System.out.print("Telefone: ");
@@ -47,10 +57,5 @@ public abstract class FanPartnerFactory implements Factory<FanPartner> {
          address = "-";
 
       partner.address = address;
-   }
-
-   @Override
-   public void put(FanPartner partner) {
-      Model.me.setPartner(partner);
    }
 }

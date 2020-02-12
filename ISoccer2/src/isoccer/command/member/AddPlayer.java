@@ -37,7 +37,7 @@ public class AddPlayer implements Command {
       Player player = (Player) factory.create();
       factory.setInfo(player);
       factory.put(player);
-      System.out.println("Jogador '" + player.id + ": " + player.getName() + " adicionado.");
+      System.out.println("Jogador '" + player.id + ": " + player.getName() + "' adicionado.");
    }
 
    @Override

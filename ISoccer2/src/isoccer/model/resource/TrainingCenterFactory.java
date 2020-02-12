@@ -14,8 +14,18 @@ public class TrainingCenterFactory extends ResourceFactory {
    }
 
    @Override
+   public TrainingCenter get() throws Exception {
+      return Model.me.getTrainingCenter();
+   }
+
+   @Override
    public String getTag() {
       return TrainingCenter.type;
+   }
+
+   @Override
+   public void put(Resource resource) {
+      Model.me.setTrainingCenter((TrainingCenter) resource);
    }
 
    @Override
@@ -29,10 +39,5 @@ public class TrainingCenterFactory extends ResourceFactory {
          nBedroom = 0;
 
       trainingCenter.nBedroom = nBedroom;
-   }
-
-   @Override
-   public void put(Resource resource) {
-      Model.me.setTrainingCenter((TrainingCenter) resource);
    }
 }

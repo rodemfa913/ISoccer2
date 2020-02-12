@@ -1,5 +1,6 @@
 package isoccer.model.staff.general;
 
+import isoccer.model.Model;
 import isoccer.model.staff.general.Lawyer;
 
 public class LawyerFactory extends GeneralFactory {
@@ -9,7 +10,7 @@ public class LawyerFactory extends GeneralFactory {
 
    @Override
    public Lawyer create() {
-      return new Lawyer(this.getCount());
+      return new Lawyer(Model.me.getCount());
    }
 
    @Override

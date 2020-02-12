@@ -1,5 +1,6 @@
 package isoccer.model.partner;
 
+import isoccer.model.Model;
 import isoccer.model.partner.Junior;
 
 public class JuniorFactory extends FanPartnerFactory {
@@ -9,7 +10,7 @@ public class JuniorFactory extends FanPartnerFactory {
 
    @Override
    public Junior create() {
-      return new Junior(this.getCount());
+      return new Junior(Model.me.getCount());
    }
 
    @Override

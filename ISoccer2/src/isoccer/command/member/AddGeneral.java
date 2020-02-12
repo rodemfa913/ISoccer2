@@ -36,7 +36,7 @@ public class AddGeneral implements Command {
       Member member = factory.create();
       factory.setInfo(member);
       factory.put(member);
-      System.out.println("Funcionário '" + member.id + ": " + member.getName() + " adicionado.");
+      System.out.println("Funcionário '" + member.id + ": " + member.getName() + "' adicionado.");
    }
 
    @Override

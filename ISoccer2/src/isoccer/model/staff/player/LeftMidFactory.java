@@ -1,5 +1,6 @@
 package isoccer.model.staff.player;
 
+import isoccer.model.Model;
 import isoccer.model.staff.player.LeftMid;
 
 public class LeftMidFactory extends PlayerFactory {
@@ -9,7 +10,7 @@ public class LeftMidFactory extends PlayerFactory {
 
    @Override
    public LeftMid create() {
-      return new LeftMid(this.getCount());
+      return new LeftMid(Model.me.getCount());
    }
 
    @Override
