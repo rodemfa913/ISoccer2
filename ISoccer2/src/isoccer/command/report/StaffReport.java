@@ -20,7 +20,9 @@ public class StaffReport implements Report {
       try {
          Coach coach = CoachFactory.me.get();
          System.out.println("\n" + coach);
-      } catch (Exception ex) {}
+      } catch (Exception ex) {
+         System.out.println(ex.getMessage());
+      }
 
       ArrayList<Player> ablePlayers = new ArrayList<>();
       ArrayList<Player> unablePlayers = new ArrayList<>();
