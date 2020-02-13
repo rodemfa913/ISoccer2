@@ -2,6 +2,7 @@ package isoccer.factory.resource;
 
 import isoccer.ISoccer;
 import isoccer.Model;
+import java.util.ArrayList;
 
 public class TransportFactory extends ResourceFactory {
    public static final TransportFactory me = new TransportFactory();
@@ -18,6 +19,10 @@ public class TransportFactory extends ResourceFactory {
       System.out.print("Id: ");
       int id = Integer.parseInt(ISoccer.input.nextLine());
       return Model.me.getBus(id);
+   }
+
+   public ArrayList<Transport> getFleet() throws Exception {
+      return Model.me.getFleet();
    }
 
    @Override

@@ -1,6 +1,7 @@
 package isoccer;
 
 import isoccer.exception.NotFoundException;
+import isoccer.exception.UnavailableException;
 import isoccer.factory.partner.FanPartner;
 import isoccer.factory.resource.Stadium;
 import isoccer.factory.resource.TrainingCenter;
@@ -49,7 +50,10 @@ public class Model {
       return this.count++;
    }
 
-   public ArrayList<Transport> getFleet() {
+   public ArrayList<Transport> getFleet() throws Exception {
+      if (this.fleet.isEmpty())
+         throw new UnavailableException();
+
       return new ArrayList<>(this.fleet.values());
    }
 
@@ -94,14 +98,14 @@ public class Model {
 
    public Stadium getStadium() throws Exception {
       if (this.stadium == null)
-         throw new NotFoundException();
+         throw new UnavailableException();
 
       return this.stadium;
    }
 
    public TrainingCenter getTrainingCenter() throws Exception {
       if (this.trainingCenter == null)
-         throw new NotFoundException();
+         throw new UnavailableException();
 
       return this.trainingCenter;
    }

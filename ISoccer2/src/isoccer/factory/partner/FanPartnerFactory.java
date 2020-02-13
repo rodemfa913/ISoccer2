@@ -5,6 +5,7 @@ import isoccer.Model;
 import isoccer.RegEx;
 import isoccer.exception.FormatException;
 import isoccer.factory.Factory;
+import java.util.ArrayList;
 
 public abstract class FanPartnerFactory implements Factory<FanPartner> {
    public abstract void setContribution(double contribution);
@@ -18,6 +19,10 @@ public abstract class FanPartnerFactory implements Factory<FanPartner> {
       System.out.print("Id: ");
       int id = Integer.parseInt(ISoccer.input.nextLine());
       return Model.me.getPartner(id);
+   }
+
+   public static ArrayList<FanPartner> getPartners() {
+      return Model.me.getPartners();
    }
 
    @Override

@@ -22,8 +22,8 @@ public class ISoccer {
       }
 
       Command[] actions = {
-         AddMember.me, AddPartner.me, AddResource.me, ManagePlayer.me, ManagePartner.me/*,
-         ManageResource.me, SetContribution.me, GenerateReport.me*/
+         AddMember.me, AddPartner.me, AddResource.me, ManagePlayer.me,
+         ManagePartner.me, ManageResource.me, SetContribution.me, GenerateReport.me
       };
 
       while (true) {
