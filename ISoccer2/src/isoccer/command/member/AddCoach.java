@@ -1,8 +1,8 @@
 package isoccer.command.member;
 
 import isoccer.command.Command;
-import isoccer.model.staff.Coach;
-import isoccer.model.staff.CoachFactory;
+import isoccer.factory.staff.Coach;
+import isoccer.factory.staff.CoachFactory;
 
 public class AddCoach implements Command {
    public static final AddCoach me = new AddCoach();

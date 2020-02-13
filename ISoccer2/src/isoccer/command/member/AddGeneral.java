@@ -2,14 +2,14 @@ package isoccer.command.member;
 
 import isoccer.ISoccer;
 import isoccer.command.Command;
-import isoccer.model.staff.Member;
-import isoccer.model.staff.general.CookFactory;
-import isoccer.model.staff.general.DoctorFactory;
-import isoccer.model.staff.general.DriverFactory;
-import isoccer.model.staff.general.GeneralFactory;
-import isoccer.model.staff.general.LawyerFactory;
-import isoccer.model.staff.general.PresidentFactory;
-import isoccer.model.staff.general.TrainerFactory;
+import isoccer.factory.staff.Member;
+import isoccer.factory.staff.general.CookFactory;
+import isoccer.factory.staff.general.DoctorFactory;
+import isoccer.factory.staff.general.DriverFactory;
+import isoccer.factory.staff.general.GeneralFactory;
+import isoccer.factory.staff.general.LawyerFactory;
+import isoccer.factory.staff.general.PresidentFactory;
+import isoccer.factory.staff.general.TrainerFactory;
 
 public class AddGeneral implements Command {
    private GeneralFactory[] factories;

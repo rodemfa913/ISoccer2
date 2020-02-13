@@ -1,11 +1,11 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.model.partner.EliteFactory;
-import isoccer.model.partner.FanPartner;
-import isoccer.model.partner.FanPartnerFactory;
-import isoccer.model.partner.JuniorFactory;
-import isoccer.model.partner.SeniorFactory;
+import isoccer.factory.partner.EliteFactory;
+import isoccer.factory.partner.FanPartner;
+import isoccer.factory.partner.FanPartnerFactory;
+import isoccer.factory.partner.JuniorFactory;
+import isoccer.factory.partner.SeniorFactory;
 
 public class AddPartner implements Command {
    private FanPartnerFactory[] factories;

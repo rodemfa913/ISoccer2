@@ -1,11 +1,11 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.model.resource.Resource;
-import isoccer.model.resource.ResourceFactory;
-import isoccer.model.resource.StadiumFactory;
-import isoccer.model.resource.TrainingCenterFactory;
-import isoccer.model.resource.TransportFactory;
+import isoccer.factory.resource.Resource;
+import isoccer.factory.resource.ResourceFactory;
+import isoccer.factory.resource.StadiumFactory;
+import isoccer.factory.resource.TrainingCenterFactory;
+import isoccer.factory.resource.TransportFactory;
 
 public class ManageResource implements Command {
    private ResourceFactory[] getters;

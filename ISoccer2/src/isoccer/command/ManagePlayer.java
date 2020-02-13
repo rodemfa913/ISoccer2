@@ -1,8 +1,8 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.model.staff.player.Player;
-import isoccer.model.staff.player.PlayerFactory;
+import isoccer.factory.staff.player.Player;
+import isoccer.factory.staff.player.PlayerFactory;
 
 public class ManagePlayer implements Command {
    public static final ManagePlayer me = new ManagePlayer();

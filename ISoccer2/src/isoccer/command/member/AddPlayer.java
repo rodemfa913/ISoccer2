@@ -2,15 +2,15 @@ package isoccer.command.member;
 
 import isoccer.ISoccer;
 import isoccer.command.Command;
-import isoccer.model.staff.player.CentreMidFactory;
-import isoccer.model.staff.player.DefMidFactory;
-import isoccer.model.staff.player.DefenderFactory;
-import isoccer.model.staff.player.ForwardFactory;
-import isoccer.model.staff.player.GoalKeeperFactory;
-import isoccer.model.staff.player.LeftMidFactory;
-import isoccer.model.staff.player.Player;
-import isoccer.model.staff.player.PlayerFactory;
-import isoccer.model.staff.player.RightMidFactory;
+import isoccer.factory.staff.player.CentreMidFactory;
+import isoccer.factory.staff.player.DefMidFactory;
+import isoccer.factory.staff.player.DefenderFactory;
+import isoccer.factory.staff.player.ForwardFactory;
+import isoccer.factory.staff.player.GoalKeeperFactory;
+import isoccer.factory.staff.player.LeftMidFactory;
+import isoccer.factory.staff.player.Player;
+import isoccer.factory.staff.player.PlayerFactory;
+import isoccer.factory.staff.player.RightMidFactory;
 
 public class AddPlayer implements Command {
    private PlayerFactory[] factories;

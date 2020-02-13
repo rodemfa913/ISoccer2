@@ -1,8 +1,8 @@
 package isoccer.command;
 
 import isoccer.ISoccer;
-import isoccer.model.partner.FanPartner;
-import isoccer.model.partner.FanPartnerFactory;
+import isoccer.factory.partner.FanPartner;
+import isoccer.factory.partner.FanPartnerFactory;
 
 public class ManagePartner implements Command {
    public static final ManagePartner me = new ManagePartner();
